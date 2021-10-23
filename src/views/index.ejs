@@ -40,7 +40,7 @@
                                 <td>
                                     <a href="/turn/<%= tasks[i]._id %>" class="btn <%= tasks[i].estatus ? 'btn-success' : 'btn-dark' %> m-1">Done</a>
                                     <a href="/delete/<%= tasks[i]._id %>" class="btn btn-danger m-1">Delete</a>
-                                    <a href="" class="btn btn-info m-1">Edit</a>
+                                    <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info m-1">Edit</a>
                                 </td>
                             </tr>
                         <%} %> 
