@@ -16,6 +16,14 @@ router.post('/add', async (req, res)=>{
     res.redirect('/')
 });
 
+router.get('/turn/:id', async (req, res)=>{
+    const {id} = req.params;
+    const task = await Task.findById(id);
+    task.estatus = !task.estatus;
+    await task.save();
+    res.redirect('/');
+});
+
 router.get('/delete/:id', async (req,res)=>{
     const {id} = req.params;
     await Task.remove({_id:id});
