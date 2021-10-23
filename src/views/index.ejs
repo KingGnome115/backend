@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <!--Form-->
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <form action="/add" method="POST"><!--Mandar un evento-->
@@ -21,16 +21,29 @@
                 </div>
             </div>
             <!--List-->
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <table class="table table-bordered table-hover">
                     <thead>
-                        <th>N°</th>
-                        <th>Titulo</th>
-                        <th>Descripcion</th>
-                        <th>Operacion</th>
+                        <tr>
+                            <th>N°</th>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Operacion</th>
+                        </tr>
                     </thead>
                     <tbody>
-
+                        <% for(var i = 0; i<tasks.length; i++){%>
+                            <tr>
+                                <td> <%= i+1 %> </th>
+                                <td> <%= tasks[i].titulo %> </td>
+                                <td> <%= tasks[i].descripcion %> </td>
+                                <td>
+                                    <a href="" class="btn btn-dark m-1">Done</a>
+                                    <a href="" class="btn btn-danger m-1">Delete</a>
+                                    <a href="" class="btn btn-info m-1">Edit</a>
+                                </td>
+                            </tr>
+                        <%} %> 
                     </tbody>
                 </table>
             </div>
