@@ -6,12 +6,12 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <form action="">
+                        <form action="/add" method="POST"><!--Mandar un evento-->
                           <div class="form-group">
-                            <input type="text" name="title" placeholder="Inserta un titulo" class="form-control m-1">
+                            <input type="text" name="titulo" placeholder="Inserta un titulo" class="form-control m-1">
                           </div>  
                           <div class="form-group">
-                              <textarea name="description" cols="80" class="form-control m-1" placeholder="Inserta una descripcion"></textarea>
+                              <textarea name="descripcion" cols="80" class="form-control m-1" placeholder="Inserta una descripcion"></textarea>
                           </div>
                           <div>
                               <button type="submit" class="btn btn-primary m-1">Agregar</button>
@@ -30,7 +30,7 @@
                         <th>Operacion</th>
                     </thead>
                     <tbody>
-                        
+
                     </tbody>
                 </table>
             </div>
